@@ -4,19 +4,15 @@ option csharp_namespace = "FibonacciGRPC";
 
 package fibonacci;
 
-// The greeting service definition.
 service Fibonacci {
-  // Sends a greeting
   rpc FindFibonacci (FibonacciRequest) returns (FibonacciResult);
   rpc StreamFibonacci (FibonacciRequest) returns (stream FibonacciResult);
 }
 
-// The request message containing the user's name.
 message FibonacciRequest {
   int32 number = 1;
 }
 
-// The response message containing the greetings.
 message FibonacciResult {
   string result = 1;
 }
